@@ -140,19 +140,27 @@
 
 		// hovering a pin / clicking a pin
 		pins.forEach(function(pin) {
+			console.log(pin);
+			console.log('QDE', `Processing pin ${pin.getAttribute('data-space')}`)
 			var contentItem = contentEl.querySelector('.content__item[data-space="' + pin.getAttribute('data-space') + '"]');
 
+			if (!contentItem) {
+				console.warn('QDE', `Cannot find content item for pin ${pin.getAttribute('data-space')}`);
+			}
 			pin.addEventListener('mouseenter', function() {
+				console.log('QDE', `MouseEnter pin ${pin.getAttribute('data-space')}`)
 				if( !isOpenContentArea ) {
 					classie.add(contentItem, 'content__item--hover');
 				}
 			});
 			pin.addEventListener('mouseleave', function() {
+				console.log('QDE', `MouseLeave pin ${pin.getAttribute('data-space')}`)
 				if( !isOpenContentArea ) {
 					classie.remove(contentItem, 'content__item--hover');
 				}
 			});
 			pin.addEventListener('click', function(ev) {
+				console.log('QDE', `Clicking pin ${pin.getAttribute('data-space')}`);
 				ev.preventDefault();
 				// open content for this pin
 				openContent(pin.getAttribute('data-space'));
@@ -453,15 +461,19 @@
 	function showSpace(sliding) {
 		// the content item
 		var contentItem = contentEl.querySelector('.content__item[data-space="' + spaceref + '"]');
-		// show content
-		classie.add(contentItem, 'content__item--current');
-		if( sliding ) {
-			onEndTransition(contentItem, function() {
-				classie.add(contentEl, 'content--open');
-			});
+		if (contentItem) {
+			// show content
+			classie.add(contentItem, 'content__item--current');
+			if( sliding ) {
+				onEndTransition(contentItem, function() {
+					classie.add(contentEl, 'content--open');
+				});
+			}
+			// map pin gets selected
+			classie.add(mallLevelsEl.querySelector('.pin[data-space="' + spaceref + '"]'), 'pin--active');
+		} else {
+			console.log('QDE', `Warning, no associated space for ${spaceref}`)
 		}
-		// map pin gets selected
-		classie.add(mallLevelsEl.querySelector('.pin[data-space="' + spaceref + '"]'), 'pin--active');
 	}
 
 	/**
@@ -488,19 +500,23 @@
 	function hideSpace() {
 		// the content item
 		var contentItem = contentEl.querySelector('.content__item[data-space="' + spaceref + '"]');
-		// hide content
-		classie.remove(contentItem, 'content__item--current');
-		// map pin gets unselected
-		classie.remove(mallLevelsEl.querySelector('.pin[data-space="' + spaceref + '"]'), 'pin--active');
-		// remove class active (if any) from current list item
-		var activeItem = spacesEl.querySelector('li.list__item--active');
-		if( activeItem ) {
-			classie.remove(activeItem, 'list__item--active');
-		}
-		// remove class selected (if any) from current space
-		var activeSpaceArea = mallLevels[selectedLevel - 1].querySelector('svg > .map__space--selected');
-		if( activeSpaceArea ) {
-			classie.remove(activeSpaceArea, 'map__space--selected');
+		if (contentItem) {
+			// hide content
+			classie.remove(contentItem, 'content__item--current');
+			// map pin gets unselected
+			classie.remove(mallLevelsEl.querySelector('.pin[data-space="' + spaceref + '"]'), 'pin--active');
+			// remove class active (if any) from current list item
+			var activeItem = spacesEl.querySelector('li.list__item--active');
+			if( activeItem ) {
+				classie.remove(activeItem, 'list__item--active');
+			}
+			// remove class selected (if any) from current space
+			var activeSpaceArea = mallLevels[selectedLevel - 1].querySelector('svg > .map__space--selected');
+			if( activeSpaceArea ) {
+				classie.remove(activeSpaceArea, 'map__space--selected');
+			}
+		} else {
+			console.log('QDE', `Warning, no associated space for ${spaceref}`)
 		}
 	}
 

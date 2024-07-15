@@ -334,7 +334,8 @@ button:focus {
 .levels--selected-4 .level--2,
 .levels--selected-5 .level--2,
 .levels--selected-4 .level--3,
-.levels--selected-5 .level--3 {
+.levels--selected-5 .level--3,
+.levels--selected-5 .level--4 {
 	-webkit-transform: translateZ(-60vmin);
 	transform: translateZ(-60vmin);
 }
@@ -356,16 +357,15 @@ button:focus {
 .levels--selected-2 .level--current::after,
 .levels--selected-3 .level--current,
 .levels--selected-3 .level--current::after,
-.levels--selected-4 .level--3,
-.levels--selected-5 .level--3 {
+.levels--selected-4 .level--current,
+.levels--selected-4 .level--current::after,
+.levels--selected-5 .level--4 {
 	-webkit-transition-delay: 0.25s;
 	transition-delay: 0.25s;
 }
 
 .levels--selected-1 .level--current,
 .levels--selected-1 .level--current::after,
-.levels--selected-4 .level--current,
-.levels--selected-4 .level--current::after,
 .levels--selected-5 .level--current,
 .levels--selected-5 .level--current::after {
 	-webkit-transition-delay: 0.45s;
@@ -929,15 +929,15 @@ button:focus {
 .pin--4-7 { top: 58vmin; left: 10vmin; }
 
 /* Pins for floor 5 */
-.pin--5-1 { top: 55vmin; left: 21vmin; }
+.pin--5-1 { top: 35vmin; left: 51vmin; }
 .pin--5-2 { top: 18vmin; left: 20vmin; }
 .pin--5-3 { top: 21vmin; left: 88vmin; }
 .pin--5-4 { top: 52vmin; left: 74vmin; }
-.pin--5-5 { top: 33vmin; left: 38vmin; }
-.pin--5-6 { top: 39vmin; left: 56vmin; }
+/* .pin--5-5 { top: 33vmin; left: 38vmin; } */
+.pin--5-6 { top: 60vmin; left: 56vmin; }
 .pin--5-7 { top: 58vmin; left: 10vmin; }
 
-/* Mobile compatability */
+/* Mobile compatibility */
 .open-search,
 .close-search {
 	display: none;

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   class="map map--4"
+   viewBox="0 0 1200 800"
+   width="100%"
+   height="100%"
+   preserveAspectRatio="xMidYMid meet"
+   version="1.1"
+   id="svg50"
+   sodipodi:docname="01_new_fourth_stair_test.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs54" />
+  <sodipodi:namedview
+     id="namedview52"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="0.9775"
+     inkscape:cx="647.05882"
+     inkscape:cy="-609.71867"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg50" />
+  <style
+     nonce="rAnd0m"
+     id="style2">
+		/* Level map */
+
+		.map__ground {
+			fill: #d7d7dc;
+		}
+
+		.map__outline {
+			-webkit-transition: fill 0.3s;
+			transition: fill 0.3s;
+			fill: #bbb;
+		}
+
+		.level:hover .map__outline,
+		.level--current .map__outline {
+			fill: #a6a3a8;
+		}
+
+		.map__tree {
+			fill: #7bad7f;
+		}
+
+		.map__lake {
+			fill: #a2bbdd;
+		}
+
+		.map__space {
+			-webkit-transition: fill-opacity 0.8s;
+			transition: fill-opacity 0.8s;
+			fill: #bdbdbd;
+			fill-opacity: 0.6;
+		}
+
+		.level--current .map__space {
+			fill-opacity: 1;
+		}
+
+		 .map__space--selected {
+		 	fill: #A4A4A4;
+		 }
+	</style>
+  <title
+     id="title5">Map Level 4</title>
+  <polygon
+     points="1035.94 787.41 1035.94 423.16 855.37 423.16 855.37 350.52 1187.28 350.52 1187.28 12.59 548.09 12.59 548.09 68.87 437.36 68.87 437.36 12.59 49.37 12.59 49.37 366.5 12.72 366.5 12.72 787.41 356.2 787.41 414.93 584.41 554.4 584.41 627.81 787.41 1035.94 787.41"
+     class="map__ground"
+     id="polygon6" />
+  <path
+     d="M1187.28,12.59V350.52H855.37v72.64h180.58V787.41H627.81l-73.41-203H414.93l-58.73,203H12.72V366.5H49.37V12.59h388V68.87H548.08V12.59h639.19M1200,0H535.36V56.28H450.09V0H36.65V353.91H0V800H365.8l2.64-9.13L424.52,597H545.44l70.39,194.65,3,8.35h429.82V410.57H868.09V363.11H1200V0h0Z"
+     class="map__outline"
+     id="path8" />
+  <rect
+     x="666.9"
+     y="565.6"
+     width="26.3"
+     height="26"
+     class="map__space"
+     id="rect18" />
+  <rect
+     x="282.3"
+     y="478.1"
+     width="26.3"
+     height="26"
+     class="map__space"
+     id="rect22" />
+  <rect
+     x="12.7"
+     y="366.5"
+     width="242.06592"
+     height="420.52835"
+     class="map__space"
+     id="rect24"
+     style="-webkit-transition:fill-opacity 0.8s" />
+  <polygon
+     data-space="5.02"
+     points="49.4,354.1 362.1,354.1 362.1,230.9 600,230.9 600,297.1 855.4,297.1 855.4,12.6 548.1,12.6 548.1,68.9 437.4,68.9 437.4,12.6 49.4,12.6 "
+     class="map__space"
+     id="polygon32" />
+  <polygon
+     points="886.9,67.8 901.3,43 929.9,43 944.2,67.8 929.9,92.6 901.3,92.6 "
+     class="map__space"
+     id="polygon38"
+     transform="matrix(4.2787878,0,0,4.2787878,-2907.9569,-140.98788)"
+     style="-webkit-transition:fill-opacity 0.8s" />
+  <rect
+     data-space="5.04"
+     x="855.4"
+     y="423.2"
+     width="180.6"
+     height="364.2"
+     class="map__space"
+     id="rect46" />
+  <polygon
+     points="627.8,787.4 613.2,747 846.6,658.6 846.6,787.4 "
+     class="map__space"
+     id="polygon48"
+     style="-webkit-transition:fill-opacity 0.8s"
+     transform="matrix(1.0631442,0,0,1.9915636,-53.457863,-780.7572)" />
+  <path
+     style="fill:#bdbdbd;fill-opacity:0.6;stroke-width:2.11306"
+     d="m 368.44629,361.71737 33.25487,181.48116 422.9472,-95.76202 -14.65772,-102.36377 z"
+     id="path1104"
+     inkscape:transform-center-x="-12.064418"
+     inkscape:transform-center-y="8.3479861" />
+</svg>
