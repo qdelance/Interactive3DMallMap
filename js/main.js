@@ -109,6 +109,7 @@
 	function initEvents() {
 		// click on a Mall´s level
 		mallLevels.forEach(function(level, pos) {
+			console.log('QDE', `Processing level ${level}, pos=${pos}`);
 			level.addEventListener('click', function() {
 				// shows this level
 				showLevel(pos+1);

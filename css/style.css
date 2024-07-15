@@ -278,6 +278,10 @@ button:focus {
 	content: 'L4';
 }
 
+.level--5::after {
+	content: 'L5';
+}
+
 .level:not(:first-child) {
 	position: absolute;
 	top: 0;
@@ -299,13 +303,18 @@ button:focus {
 	transform: translateZ(30vmin);
 }
 
+.level--5 {
+	-webkit-transform: translateZ(40vmin);
+	transform: translateZ(40vmin);
+}
 
 /* Selection transitions */
 
 .levels--selected-1 .level:not(.level--1),
 .levels--selected-2 .level:not(.level--2),
 .levels--selected-3 .level:not(.level--3),
-.levels--selected-4 .level:not(.level--4) {
+.levels--selected-4 .level:not(.level--4),
+.levels--selected-5 .level:not(.level--5) {
 	opacity: 0;
 	/* fade out all others */
 }
@@ -320,9 +329,12 @@ button:focus {
 .levels--selected-2 .level--1,
 .levels--selected-3 .level--1,
 .levels--selected-4 .level--1,
+.levels--selected-5 .level--1,
 .levels--selected-3 .level--2,
 .levels--selected-4 .level--2,
-.levels--selected-4 .level--3 {
+.levels--selected-5 .level--2,
+.levels--selected-4 .level--3,
+.levels--selected-5 .level--3 {
 	-webkit-transform: translateZ(-60vmin);
 	transform: translateZ(-60vmin);
 }
@@ -333,7 +345,8 @@ button:focus {
 .levels--selected-1 .level--3,
 .levels--selected-2 .level--3,
 .levels--selected-3 .level--2,
-.levels--selected-4 .level--2 {
+.levels--selected-4 .level--2,
+.levels--selected-5 .level--2 {
 	-webkit-transition-delay: 0.1s;
 	transition-delay: 0.1s;
 }
@@ -343,7 +356,8 @@ button:focus {
 .levels--selected-2 .level--current::after,
 .levels--selected-3 .level--current,
 .levels--selected-3 .level--current::after,
-.levels--selected-4 .level--3 {
+.levels--selected-4 .level--3,
+.levels--selected-5 .level--3 {
 	-webkit-transition-delay: 0.25s;
 	transition-delay: 0.25s;
 }
@@ -351,7 +365,9 @@ button:focus {
 .levels--selected-1 .level--current,
 .levels--selected-1 .level--current::after,
 .levels--selected-4 .level--current,
-.levels--selected-4 .level--current::after {
+.levels--selected-4 .level--current::after,
+.levels--selected-5 .level--current,
+.levels--selected-5 .level--current::after {
 	-webkit-transition-delay: 0.45s;
 	transition-delay: 0.45s;
 }
@@ -911,6 +927,15 @@ button:focus {
 .pin--4-5 { top: 33vmin; left: 38vmin; }
 .pin--4-6 { top: 39vmin; left: 56vmin; }
 .pin--4-7 { top: 58vmin; left: 10vmin; }
+
+/* Pins for floor 5 */
+.pin--5-1 { top: 55vmin; left: 21vmin; }
+.pin--5-2 { top: 18vmin; left: 20vmin; }
+.pin--5-3 { top: 21vmin; left: 88vmin; }
+.pin--5-4 { top: 52vmin; left: 74vmin; }
+.pin--5-5 { top: 33vmin; left: 38vmin; }
+.pin--5-6 { top: 39vmin; left: 56vmin; }
+.pin--5-7 { top: 58vmin; left: 10vmin; }
 
 /* Mobile compatability */
 .open-search,
